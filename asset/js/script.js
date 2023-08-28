@@ -39,14 +39,20 @@ for (let i = 0; i < userMails.length; i++) {
         if(userName === 'pincopallo@outlook.it') {
     
           console.log(mail);
+
+          listItem.innertHTML = mail
     
         } else if(userName === 'mariorossi@gmail.com') {
 
             console.log(mail);
 
+            listItem.innertHTML = mail
+
         } else if (userName === 'ziotom@libero.it') {
 
             console.log(mail);
+
+            listItem.innertHTML = mail
 
         } else {
 
