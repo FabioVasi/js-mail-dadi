@@ -13,6 +13,12 @@ Strumenti.
 - for
 - array
 - const 
+- getElementById
+- append
+- Math.floor / Math.random
+- addEventListener
+- alert
+- let
 
 */
 
@@ -46,27 +52,25 @@ document.getElementById('submit').addEventListener("click", function() {
       
         listElement.append(listItem);
       
-        } else if(userName === 'mariorossi@gmail.com') {
+    } else if(userName === 'mariorossi@gmail.com') {
       
-          console.log(mail);
+        console.log(mail);
+
+        listElement.append(listItem);
       
-          listElement.append(listItem);
+    } else if(userName === 'ziotom@libero.it') {
       
-        } else if(userName === 'ziotom@libero.it') {
+        console.log(mail);
       
-          console.log(mail);
+        listElement.append(listItem);
       
-          listElement.append(listItem);
+    } else {
       
-        } else {
+        alert("Ops!, non puoi accedere a questa pagina, riprova.")
       
-          alert("Ops!, non puoi accedere a questa pagina, riprova.")
-      
-        }
+    }
 
 })
-
-
 
 document.getElementById('generate').addEventListener("click", function() {
 
