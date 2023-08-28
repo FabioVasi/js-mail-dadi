@@ -22,52 +22,42 @@ Strumenti.
 
 */
 
-const userMails = ['pincopallo@outlook.it', 'mariorossi@gmail.com', 'ziotom@libero.it'];
+const userMails = ['pincopallo@outlook.it', 'mariorossi@gmail.com', 'ziotom@libero.it', 'artur@boolean.it', 'paolo@boolean.it' ];
 
 console.log(userMails);
 
 const listElement = document.querySelector('ul');
 
 document.getElementById('submit').addEventListener("click", function() {
-    
+    // leggo valore della mail dall'input
     const userName = document.getElementById('email').value;
     
     console.log(userName);
 
+    let inList = false;
+    // itero l'array con le email approvate
     for (let i = 0; i < userMails.length; i++) {
+        
+        if(userName === userMails[i]) {
+
+            console.log(userMails[i]);
     
-        const mail = userMails[i];
+            const listItem = `<li>${userMails[i]}</li>`;
+
+            listElement.append(listItem);
     
-        console.log(mail);
-    
-        const listItem = `<li>${mail}</li>`;
-    
-        listElement.append(listItem);
-    
+        } 
+
     }
 
-    if(userName === 'pincopallo@outlook.it') {
+    if (inList === false) {
+          
+        alert("Ops!, your email isn't on the list.")
+      
+    } else if(userName === userMails[i]) {
 
-        console.log(mail);
-      
-        listElement.append(listItem);
-      
-    } else if(userName === 'mariorossi@gmail.com') {
-      
-        console.log(mail);
+        alert("Welcome")
 
-        listElement.append(listItem);
-      
-    } else if(userName === 'ziotom@libero.it') {
-      
-        console.log(mail);
-      
-        listElement.append(listItem);
-      
-    } else {
-      
-        alert("Ops!, non puoi accedere a questa pagina, riprova.")
-      
     }
 
 })
@@ -84,11 +74,11 @@ document.getElementById('generate').addEventListener("click", function() {
 
     if(userNumber > computerNumber) {
 
-        alert("Congratulations! you are lucky")
+        alert("Congratulations! you are lucky.")
 
     } else {
 
-        alert("Sorry! you are unlucky")
+        alert("Sorry! you are unlucky.")
 
     }
 
