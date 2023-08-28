@@ -50,13 +50,13 @@ document.getElementById('submit').addEventListener("click", function() {
 
     }
 
-    if (inList === false) {
+    if (inList == false) {
           
-        alert("Ops!, your email isn't on the list.")
+        alert("Ops!, your email isn't on the list.");
       
-    } else if(userName === userMails[i]) {
+    } else if(userName == userMails[i]) {
 
-        alert("Welcome")
+        alert("Welcome");
 
     }
 
