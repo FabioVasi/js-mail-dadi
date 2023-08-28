@@ -54,8 +54,12 @@ document.getElementById('submit').addEventListener("click", function() {
           
         alert("Ops!, your email isn't on the list.");
       
-    } else if(userName == userMails[i]) {
+    } else if() {
 
+        
+        
+    } else{
+        
         alert("Welcome");
 
     }
@@ -83,11 +87,3 @@ document.getElementById('generate').addEventListener("click", function() {
     }
 
 })
-
-
-
-
-
-
-
-
