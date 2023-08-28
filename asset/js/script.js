@@ -54,14 +54,6 @@ document.getElementById('submit').addEventListener("click", function() {
           
         alert("Ops!, your email isn't on the list.");
       
-    } else if() {
-
-        
-        
-    } else{
-        
-        alert("Welcome");
-
     }
 
 })
