@@ -52,7 +52,7 @@ document.getElementById('submit').addEventListener("click", function() {
       
           listElement.append(listItem);
       
-        } else if (userName === 'ziotom@libero.it') {
+        } else if(userName === 'ziotom@libero.it') {
       
           console.log(mail);
       
@@ -70,7 +70,23 @@ document.getElementById('submit').addEventListener("click", function() {
 
 document.getElementById('generate').addEventListener("click", function() {
 
+    const userNumber = Math.floor(Math.random() * 6) + 1;
 
+    console.log(userNumber);
+
+    const computerNumber = Math.floor(Math.random() * 6) + 1;
+    
+    console.log(computerNumber);
+
+    if(userNumber > computerNumber) {
+
+        alert("Congratulations! you are lucky")
+
+    } else {
+
+        alert("Sorry! you are unlucky")
+
+    }
 
 })
 
