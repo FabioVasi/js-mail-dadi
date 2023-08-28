@@ -33,8 +33,6 @@ document.getElementById('submit').addEventListener("click", function() {
     const userName = document.getElementById('email').value;
     
     console.log(userName);
-
-    let inList = false;
     // itero l'array con le email approvate
     for (let i = 0; i < userMails.length; i++) {
         
@@ -45,15 +43,11 @@ document.getElementById('submit').addEventListener("click", function() {
             const listItem = `<li>${userMails[i]}</li>`;
 
             listElement.append(listItem);
+
+            alert("Welcome.")
     
         } 
 
-    }
-
-    if (inList == false) {
-          
-        alert("Ops!, your email isn't on the list.");
-      
     }
 
 })
