@@ -22,7 +22,7 @@ Strumenti.
 
 */
 
-const userMails = ['pincopallo@outlook.it', 'mariorossi@gmail.com', 'ziotom@libero.it', 'artur@boolean.it', 'paolo@boolean.it' ];
+const userMails = ['pincopallo@outlook.it', 'mariorossi@gmail.com', 'artur@boolean.it', 'paolo@boolean.it' ];
 
 console.log(userMails);
 
@@ -33,6 +33,9 @@ document.getElementById('submit').addEventListener("click", function() {
     const userName = document.getElementById('email').value;
     
     console.log(userName);
+
+    let inList = false;
+
     // itero l'array con le email approvate
     for (let i = 0; i < userMails.length; i++) {
         
@@ -44,9 +47,13 @@ document.getElementById('submit').addEventListener("click", function() {
 
             listElement.append(listItem);
 
-            alert("Welcome.")
+            alert("Welcome!")
     
-        } 
+        }else {
+        
+            alert("Your email isn't on the list.");
+    
+        }
 
     }
 
@@ -64,11 +71,15 @@ document.getElementById('generate').addEventListener("click", function() {
 
     if(userNumber > computerNumber) {
 
-        alert("Congratulations! you are lucky.")
+        alert("Congratulations! your lucky number is " + userNumber + " play again.");
+
+    } else if(userNumber === computerNumber) {
+
+        alert("The number is even, try again.");
 
     } else {
 
-        alert("Sorry! you are unlucky.")
+        alert("Sorry! you are unlucky, IA number is " + computerNumber + " try again.");
 
     }
 
