@@ -38,23 +38,25 @@ document.getElementById('submit').addEventListener("click", function() {
 
     // itero l'array con le email approvate
     for (let i = 0; i < userMails.length; i++) {
-        
+
         if(userName === userMails[i]) {
+
+            inList = true;
+
+            alert("Welcome!")
 
             console.log(userMails[i]);
     
             const listItem = `<li>${userMails[i]}</li>`;
 
             listElement.append(listItem);
+    
+        } else {
 
-            alert("Welcome!")
-    
-        }else {
-        
-            alert("Your email isn't on the list.");
-    
+            alert("Your email isn't on the list.")
+
         }
-
+    
     }
 
 })
